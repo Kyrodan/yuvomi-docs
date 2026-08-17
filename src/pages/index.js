@@ -3,6 +3,7 @@ import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import Footer from "@theme/Footer";
 import { useColorMode } from "@docusaurus/theme-common";
 import { homepageTemplate } from "../data-homepage-template";
 import homepageTranslations from "../data-homepage-translations";
@@ -716,6 +717,7 @@ export default function Home() {
           : "A privacy-first, self-hosted family planner with tasks, calendar, budget, and shopping in one private home."
       }
       wrapperClassName="yv-homepage-layout"
+      noFooter
     >
       <Head>
         <link rel="stylesheet" href={siteCssHref} />
@@ -732,6 +734,7 @@ export default function Home() {
         t={t}
         templateSource={templateSource}
       />
+      <Footer />
     </Layout>
   );
 }
