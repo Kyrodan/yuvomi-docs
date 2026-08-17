@@ -571,19 +571,10 @@
     .cta-box p { color: var(--text-2); font-size: 1.08rem; max-width: 44ch; margin: 0 auto 32px; }
     .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-    /* ===== Footer ===== */
-    footer { border-top: 1px solid var(--border); padding: 56px 0 48px; }
-    .foot-grid { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-    .foot-brand { max-width: 320px; }
-    .foot-brand .nav-logo { margin-bottom: 14px; }
-    .foot-brand p { font-size: 0.88rem; color: var(--text-2); line-height: 1.6; }
-    .foot-cols { display: flex; gap: 56px; flex-wrap: wrap; }
-    .foot-col h3 { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 14px; }
-    .foot-col a { display: flex; align-items: center; min-height: 44px; font-size: 0.9rem; color: var(--text-2); transition: color .15s; }
-    .foot-col a:hover { color: var(--accent); }
-    .foot-bottom { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-      font-size: 0.82rem; color: var(--text-3); }
-    .foot-bottom b { color: var(--text-2); font-variant-numeric: tabular-nums; }
+    /* ===== Footer =====
+       The original landing-page footer is removed in Docusaurus. Keep these
+       selectors out of the global footer namespace so they cannot affect the
+       shared site footer during initial stylesheet loading. */
 
     /* ===== Back to top =====
        The legal pages have had this since they grew a table of contents. This

@@ -57,11 +57,11 @@ function localizeShotPath(path, locale) {
     : path;
 }
 
-function decorateTemplateWithHeroShot(template, locale, isDark) {
-  const heroPath = localizeShotPath(
-    isDark ? HERO_SHOT_DARK : HERO_SHOT_LIGHT,
-    locale,
-  );
+function decorateTemplateWithHeroShot(template, locale) {
+  // Keep the SSR and first client render identical. The themed variant is
+  // applied after mount by applyShots(), which avoids homepage hydration
+  // mismatches on hard reloads.
+  const heroPath = localizeShotPath(HERO_SHOT_LIGHT, locale);
   const heroSrc = heroPath.replace(/\.png$/, ".webp");
   const heroSrcSet = srcsetFor(heroPath);
 
@@ -173,8 +173,8 @@ function HomePageContent({
   const { colorMode, setColorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const template = useMemo(
-    () => decorateTemplateWithHeroShot(templateSource, locale, isDark),
-    [isDark, locale, templateSource],
+    () => decorateTemplateWithHeroShot(templateSource, locale),
+    [locale, templateSource],
   );
 
   useEffect(() => {
