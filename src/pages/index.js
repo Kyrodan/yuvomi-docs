@@ -696,11 +696,11 @@ export default function Home() {
           /<!-- The fixed bar[\s\S]*?<\/header>\s*(?=<!-- HERO -->)/,
           "",
         )
-        .replace(
-          /<!-- FOOTER -->\s*<\/main>\s*<footer>[\s\S]*?<\/footer>\s*/,
-          "</main>\n",
-        ),
-    [],
+        // .replace(
+        //   /<!-- FOOTER -->\s*<\/main>\s*<footer>[\s\S]*?<\/footer>\s*/,
+        //   "</main>\n",
+        // ),
+    // [],
   );
 
   return (

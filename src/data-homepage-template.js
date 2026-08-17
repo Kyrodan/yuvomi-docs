@@ -571,41 +571,7 @@ openssl rand -hex 32</div><button class="copy-btn" type="button" data-copy="curl
   </div>
 </section>
 
-<!-- FOOTER -->
 </main>
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="nav-logo"><svg viewBox="0 0 160 160" fill="none" aria-hidden="true"><defs><linearGradient id="gf" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#6c3aed"/></linearGradient></defs><rect width="160" height="160" rx="36" fill="url(#gf)"/><g fill="white" fill-opacity="0.82"><circle cx="64" cy="72" r="27"/><circle cx="100" cy="78" r="25"/><circle cx="80" cy="106" r="24"/></g></svg>Yuvomi</a>
-        <p data-t="footer_heart">Built with care for families who value privacy and simplicity.</p>
-      </div>
-      <nav class="foot-cols" data-t-aria="foot_nav" aria-label="Footer">
-        <div class="foot-col">
-          <h3 data-t="foot_product">Product</h3>
-          <a href="#screens" data-t="foot_screens">Screenshots</a>
-          <a href="install.html" data-t="foot_install">Install</a>
-          <a href="https://github.com/ulsklyc/yuvomi/blob/main/docs/SPEC.md" target="_blank" rel="noopener" data-t="foot_docs">Docs &amp; spec</a>
-        </div>
-        <div class="foot-col">
-          <h3 data-t="foot_project">Project</h3>
-          <a href="https://github.com/ulsklyc/yuvomi" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://github.com/ulsklyc/yuvomi/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="foot_contrib">Contributing</a>
-          <a href="https://github.com/ulsklyc/yuvomi/blob/main/CHANGELOG.md" target="_blank" rel="noopener" data-t="foot_changelog">Changelog</a>
-          <a href="https://github.com/ulsklyc/yuvomi/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
-        </div>
-        <div class="foot-col">
-          <h3 data-t="foot_legal">Legal</h3>
-          <a href="impressum.html" data-t="foot_impressum">Imprint (DE)</a>
-          <a href="privacy.html" data-href-en="privacy.html" data-href-de="datenschutz.html" data-t="foot_privacy">Privacy</a>
-        </div>
-      </nav>
-    </div>
-    <div class="foot-bottom">
-      <span><span id="gh-stars-footer" data-gh-stars>★ 1.3k · </span><b>v2.16.1</b> · <span id="foot-released" data-released="2026-08-16">16 August 2026</span></span>
-      <span data-t="foot_madewith">Self-hosted · Privacy-first · Open source</span>
-    </div>
-  </div>
-</footer>
 
-<a class="to-top" href="#top" id="toTop"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg><span data-t="to_top">Back to top</span></a>`;
+<!-- <a class="to-top" href="#top" id="toTop"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg><span data-t="to_top">Back to top</span></a> -->
+`;
