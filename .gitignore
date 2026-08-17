@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Docusaurus / build output
+.docusaurus/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment / local config
+.env
+.env.*
+!.env.example
+
+# Tool caches
+.cache/
+.eslintcache
+.stylelintcache
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local reference snapshots / imported source material
+__actual_docs/
+__asset_source/
