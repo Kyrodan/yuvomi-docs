@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docSidebar: [
+  guideSidebar: [
     "intro",
     {
       type: "category",
@@ -101,17 +101,6 @@ const sidebars = {
             },
           ],
         },
-      ],
-    },
-    {
-      type: "category",
-      label: "Help & Support",
-      collapsible: false,
-      className: "no-indent",
-      items: [
-        "help-support/support",
-        "help-support/faq",
-        "help-support/troubleshooting"
       ],
     },
   ],

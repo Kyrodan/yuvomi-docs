@@ -8,30 +8,19 @@ import FooterCopyright from "@theme/Footer/Copyright";
 import FooterLinks from "@theme/Footer/Links";
 
 const FOOTER_COPY = {
-  de: {
-    brandText:
-      "Mit Sorgfalt gebaut fuer Familien, die Privatsphaere und Einfachheit schaetzen.",
-    navLabel: "Footer",
-    meta: "Selbst gehostet \u00b7 Privacy-first \u00b7 Open source",
-  },
-  en: {
-    brandText:
-      "Built with care for families who value privacy and simplicity.",
-    navLabel: "Footer",
-    meta: "Self-hosted \u00b7 Privacy-first \u00b7 Open source",
-  },
+  brandText: "Built with care for families who value privacy and simplicity.",
+  navLabel: "Footer",
+  meta: "Self-hosted \u00b7 Privacy-first \u00b7 Open source",
 };
 
 function Footer() {
   const { footer } = useThemeConfig();
-  const { i18n, siteConfig } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
 
   if (!footer) {
     return null;
   }
 
-  const locale = i18n.currentLocale === "de" ? "de" : "en";
-  const copy = FOOTER_COPY[locale];
   const homeUrl = useBaseUrl("/");
   const logoUrl = useBaseUrl("/img/logo.svg");
   const { copyright, links, style } = footer;
@@ -54,20 +43,20 @@ function Footer() {
                 />
                 <span>{siteConfig.title}</span>
               </Link>
-              <p className="footer__brandCopy">{copy.brandText}</p>
+              <p className="footer__brandCopy">{FOOTER_COPY.brandText}</p>
             </div>
 
             {links && links.length > 0 && (
-              <nav className="footer__nav" aria-label={copy.navLabel}>
+              <nav className="footer__nav" aria-label={FOOTER_COPY.navLabel}>
                 <FooterLinks links={links} />
               </nav>
             )}
           </div>
 
-          {(copyright || copy.meta) && (
+          {(copyright || FOOTER_COPY.meta) && (
             <div className="footer__bottomRow">
               {copyright && <FooterCopyright copyright={copyright} />}
-              <span className="footer__meta">{copy.meta}</span>
+              <span className="footer__meta">{FOOTER_COPY.meta}</span>
             </div>
           )}
         </div>

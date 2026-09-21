@@ -33,8 +33,9 @@ const siteBaseUrl = normalizeBaseUrl(
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Yuvomi",
-  tagline: "Clear documentation for everyday household workflows.",
+  title: "Yuvomi Docs",
+  tagline:
+    "Community-maintained user guide for Yuvomi. Unofficial and not affiliated with the official Yuvomi project.",
   favicon: "img/logo.svg",
 
   url: siteUrl,
@@ -48,29 +49,17 @@ const config = {
     },
   },
 
-  // i18n: {
-  //   defaultLocale: "en",
-  //   // locales: ["en", "de"],
-  //   // localeConfigs: {
-  //   //   en: {
-  //   //     label: "English",
-  //   //     htmlLang: "en",
-  //   //   },
-  //   //   de: {
-  //   //     label: "Deutsch",
-  //   //     htmlLang: "de",
-  //   //   },
-  //   // },
-  // },
-
   presets: [
     [
       "classic",
       {
         docs: {
-          path: "docs",
-          routeBasePath: "docs",
+          path: "guide",
+          routeBasePath: "guide",
           sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          editUrl: "https://github.com/Kyrodan/yuvomi-docs/edit/main/",
         },
         blog: false,
         theme: {
@@ -82,12 +71,24 @@ const config = {
 
   plugins: [
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        showLastUpdateTime: true,
+        showLastUpdateAuthor: true,
+        editUrl: "https://github.com/Kyrodan/yuvomi-docs/edit/main/",
+      },
+    ],
+    [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
-        docsRouteBasePath: ["/docs"],
+        docsRouteBasePath: ["/guide", "/community"],
+        docsDir: ["guide", "community"],
         indexBlog: false,
         hashed: true,
-        language: ["en", "de"],
+        language: ["en"],
       },
     ],
   ],
@@ -100,34 +101,27 @@ const config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Yuvomi",
+      title: "Yuvomi Docs",
       logo: {
-        alt: "Yuvomi",
+        alt: "Yuvomi Docs",
         src: "img/logo.svg",
       },
       items: [
         {
-          to: "/quick-start",
+          type: "docSidebar",
+          sidebarId: "guideSidebar",
           position: "left",
-          label: "Quick Start",
+          label: "Guide",
         },
         {
           type: "docSidebar",
-          sidebarId: "docSidebar",
+          sidebarId: "defaultSidebar",
+          docsPluginId: "community",
           position: "left",
-          label: "Docs",
+          label: "Community",
         },
         {
           type: "search",
-          position: "right",
-        },
-        // {
-        //   type: "localeDropdown",
-        //   position: "right",
-        // },
-        {
-          href: "https://github.com/ulsklyc/yuvomi",
-          label: "GitHub",
           position: "right",
         },
       ],
@@ -136,41 +130,37 @@ const config = {
       style: "light",
       links: [
         {
-          title: "Project",
+          title: "This guide",
+          items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/Kyrodan/yuvomi-docs",
+            },
+            {
+              label: "MIT License",
+              href: "https://github.com/Kyrodan/yuvomi-docs/blob/main/LICENSE",
+            },
+          ],
+        },
+        {
+          title: "Official Yuvomi project",
           items: [
             {
               label: "GitHub",
               href: "https://github.com/ulsklyc/yuvomi",
             },
             {
-              label: "Contributing",
-              href: "https://github.com/ulsklyc/yuvomi/blob/main/CONTRIBUTING.md",
+              label: "Website",
+              href: "https://yuvomi.cloud",
             },
             {
-              label: "Changelog",
-              href: "https://github.com/ulsklyc/yuvomi/blob/main/CHANGELOG.md",
-            },
-            {
-              label: "MIT License",
-              href: "https://github.com/ulsklyc/yuvomi/blob/main/LICENSE",
-            },
-          ],
-        },
-        {
-          title: "Legal",
-          items: [
-            {
-              label: "Impressum (DE)",
-              to: "/impressum",
-            },
-            {
-              label: "Datenschutz (DE)",
-              to: "/datenschutz",
+              label: "Why this guide is separate",
+              href: "https://github.com/ulsklyc/yuvomi/discussions/799#discussioncomment-18233953",
             },
           ],
         },
       ],
-      copyright: `Copyright (c) ${new Date().getFullYear()} Yuvomi.`,
+      copyright: `This is an unofficial, community-maintained guide and is not affiliated with or endorsed by Yuvomi. &copy; ${new Date().getFullYear()} contributors.`,
     },
     prism: {
       theme: themes.github,

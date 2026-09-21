@@ -2,6 +2,12 @@
   "name": "yuvomi-docs",
   "version": "0.1.0",
   "private": true,
+  "author": "Daniel Bölts (@kyrodan)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyrodan/yuvomi-docs.git"
+  },
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
